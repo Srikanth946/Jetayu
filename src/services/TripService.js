@@ -1,30 +1,35 @@
 import axios from "axios";
 const springBootAppUrl = `http://localhost:8088/Trip`;
 
+
 /* Book Cab Service */
 const bookCabService = (trip) => {
   return axios.post(`${springBootAppUrl}/bookCab`, trip);
 };
 
-/* Update Trip Service */
+
+// Update Trip
 const updateTripService = (trip) => {
   return axios.put(`${springBootAppUrl}/update`, trip);
 };
-/* View Trip */
+
+// View Trips
 const viewTripService = () => {
   return axios.get(`${springBootAppUrl}/view`);
 };
-/* View All Trip */
+
+// View ALl Trips
 const viewAllTripDataService = () => {
   return axios.get(`${springBootAppUrl}/viewAllTripData`);
 };
 
-
+// View Trips by Id
 const viewTripByIdService = (Id) => {
   console.log(Id);
   return axios.get(`${springBootAppUrl}/viewAll/${Id}`);
 };
 
+// End Trip
 const endTripService = () => {
   return axios.put(`${springBootAppUrl}/endTrip`);
 };
