@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import "../../Styles/Trip.css";
 
+/* Component To Show Trips*/
 const Pagination = (props) => {
   const allTripsListStore = useSelector((state) => state.Trip.AllTripsList);
   return (
